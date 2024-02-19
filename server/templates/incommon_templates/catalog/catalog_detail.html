@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block main %}
+{{ catalog.title }}
+<ol>
+    {% for doc in documents %}
+        <a href="{{ doc.get_absolute_url }}"><li>{{ doc.title }}</li></a>
+    {% endfor %}
+</ol>
+{% endblock main %}
